@@ -18,16 +18,14 @@ function init(){
 const changeImage = ()=>{
   if(index < 0){
     index = imageArr.length-1;
-    imageEle.src = `${str}${imageArr[index]}`;
   }else if(index >= 0 && index < imageArr.length){
-    imageEle.src = `${str}${imageArr[index]}`;
   }else if(index == imageArr.length){
     index = 0;
-    imageEle.src = `${str}${imageArr[index]}`;
   }
+  imageEle.src = `${str}${imageArr[index]}`;
 }
 
-// eventlisteners
+// eventlistener
 nextBtnEle.addEventListener('click',()=>{
   index += 1;
   changeImage();
